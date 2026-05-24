@@ -5,7 +5,7 @@ A lightweight, high-performance **Static Application Security Testing (SAST)** c
 ---
 
 ## Key Features-
-Zero Dependencies: Relies completely on native Python standard libraries ('os', 're', 'datetime'). No external packages or installation overhead required.
+Zero Dependencies: Relies completely on native Python standard libraries (`os`, `re`, `datetime`). No external packages or installation overhead required.
 Secret Detection Engine: Scans string variables and assignments using high-entropy pattern matching to intercept exposed passwords, auth tokens, and cryptographic keys.
 Logic-Flaw Mapping: Identifies dangerous code functions capable of introducing critical vulnerabilities like Command Injection or dynamic script execution.
 Automated Forensic Reporting: Aggregates multi-file findings and instantly generates a structured, human-readable executive audit report (security_report.md).
