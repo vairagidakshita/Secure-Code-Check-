@@ -18,11 +18,15 @@ The analyzer dynamically evaluates source files against the following built-in s
 
 formate: | Threat Category | Target Signatures / Keywords | Assessed Severity | Operational Risk Description |
 
-| Hardcoded Secret | `api_key`, `secret`, `password`, `auth_token` |  **High** | Exposed credentials can be leveraged by malicious actors if code repositories are compromised or publicly leaked. |
-| Command Injection | `os.system()`, `subprocess.Popen()`, `subprocess.run()` |  **High** | Direct invocation of system shells allows arbitrary OS command execution if user input reaches these functions unsanitized. |
-| Arbitrary Code Execution | `eval()`, `exec()` |  **High** | Parsing untrusted input strings straight into the active runtime environment bypasses application boundaries entirely. |
-| Weak Cryptography | `hashlib.md5()`, `hashlib.sha1()` |  **Medium** | Cryptographically broken hashing algorithms are highly susceptible to collision attacks and rapid brute-forcing. |
-| Insecure Temp Files| `tempfile.mktemp()` |  **Low** | Deprecated file generation methods prone to local symlink racing conditions on the file system layer. |
+| **Hardcoded Secret** | `api_key`, `secret`, `password`, `auth_token` |  **High** | Exposed credentials can be leveraged by malicious actors if code repositories are compromised or publicly leaked. |
+
+| **Command Injection**| `os.system()`, `subprocess.Popen()`, `subprocess.run()` |  **High** | Direct invocation of system shells allows arbitrary OS command execution if user input reaches these functions unsanitized. |
+
+| **Arbitrary Code Execution** | `eval()`, `exec()` |  **High** | Parsing untrusted input strings straight into the active runtime environment bypasses application boundaries entirely. |
+
+| **Weak Cryptography** | `hashlib.md5()`, `hashlib.sha1()` |  **Medium** | Cryptographically broken hashing algorithms are highly susceptible to collision attacks and rapid brute-forcing. |
+
+| **Insecure Temp Files**| `tempfile.mktemp()` |  **Low** | Deprecated file generation methods prone to local symlink racing conditions on the file system layer. |
 
 ---
 
@@ -45,11 +49,16 @@ Launch your native terminal interface and run the script utilizing your system's
 --bash
 python scanner.py
 #after run this you get this output:
+
 Enter full path to scan (or type '.' for current folder): 
-#then enter the path of the code that to want to check
+
+#then enter the path of the code that you want to check
+
 example output: a .md file is genrated in your folder:
+
 #in .md file you will  get all information about your code Vulnerabilities:
-#example:
+
+**Example**:
 # Static Application Security Testing (SAST) Report
 Target Directory: C:\Users\Dakshita Vairagi\OneDrive\Desktop\MY_Projects\test_code
 
