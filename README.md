@@ -52,9 +52,9 @@ python scanner.py
 
 Enter full path to scan (or type '.' for current folder): 
 
-#then enter the path of the code that you want to check
+##enter the path of the code that you want to check
 
-example output: a .md file is genrated in your folder:
+expected output: a .md file is genrated in your folder:
 
 #in .md file you will  get all information about your code Vulnerabilities:
 
